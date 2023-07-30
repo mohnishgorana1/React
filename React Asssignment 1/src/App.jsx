@@ -4,6 +4,7 @@ import Person from './components/Person.jsx'
 import Button from './components/Button.jsx'
 import Header from './components/Header'
 import List from './components/List'
+import { Counter, OddEven,ToDoList }  from './components/Counter'
 function App() {
   return (
     <>
@@ -28,6 +29,18 @@ function App() {
       <h3>List Component</h3>
       <List items={["Hey", "Mohnish" ,"Gorana" , "List", "Here"]}/>
       <h1>..............................</h1>
+
+      <h2 id='hooks'> Understanding hooks</h2>
+      <Counter /> 
+
+      <h1>..............................</h1>
+      <h2 id='hooks'>Conditional Rendering </h2>
+      <OddEven />
+      <br/>
+      <br/>
+      <br/>
+      <h3>TODO</h3>
+      <ToDoList />
 
 
 
