@@ -1,23 +1,43 @@
+
 .card{
-    border: 1px solid black;
-    border-radius: 10px;
-    width: 30vw;
+    width:23vw;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 30px 10px;
+    padding-bottom: 50px;
+    border-radius: 10px;;
+}
+.sign-in, .sign-up{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center ;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
-
-
-
-img{
-    border: 1px solid yellow;
-    width: 20vw;
-    height:150px;
-}
-input{
+.inputs{
     display: flex;
-    flex-direction: columns;
-    gap: 20px;
+    flex-direction: column;
+    gap:10px;
+}
+.input_field{
+    padding: 10px 20px;
+    width: 15vw;
+    font-size: 14px;
+    border-radius:3px;
+    border:0.5px soild black;
+}
+.btn{
+    background-color: #1877F2;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius:5px;
+    border:none;
+    color:white;
+    width:18vw;
+    cursor: pointer;
+}
+.footer-text{
+    font-size: 20px;;
+}
+.sign-in-up-link{
+    color:#176bd9;
 }

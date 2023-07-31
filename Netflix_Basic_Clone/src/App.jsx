@@ -3,8 +3,6 @@ import './App.css'
 import Card from './Components/Card.jsx'
 import sdata from './sdata.js'
 import Header from './Components/Header';
-console.log(sdata[0].sname);
-
 
 
 
