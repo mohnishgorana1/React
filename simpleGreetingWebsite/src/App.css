@@ -1,0 +1,30 @@
+.timing{
+    margin: auto 0;
+    width: 15vw;
+    background-color: yellow;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;;
+    border-radius: 10rem;
+}
+
+.time{
+    color: #ed2e4e;
+    font-size: 30px;
+}
+.time-btn{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #ed2e4e;
+    border:none;
+    border-radius: 15px;
+    color:white;
+    cursor: pointer;;
+}
+.time-btn:hover{
+    border:0.51px solid white;;
+}
