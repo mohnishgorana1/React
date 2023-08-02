@@ -1,5 +1,12 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;;
+    gap: 30px;
+    
+}
 .timing{
-    margin: auto 0;
     width: 15vw;
     background-color: yellow;;
     display: flex;
@@ -8,7 +15,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;;
-    border-radius: 10rem;
+    border-radius:10px;
 }
 
 .time{
@@ -27,4 +34,103 @@
 }
 .time-btn:hover{
     border:0.51px solid white;;
+}
+
+.digital-time{
+    width: 25vw;
+    height: 15vh;
+    padding: 50px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    border: 2px solid rgb(13, 0, 255);
+    box-shadow: 1px 1px 20px #ff0000;;
+
+}
+.digital-time p{
+    font-size: 36px;;
+    color:yellow;
+    background-color: rgb(8, 8, 2);;
+    border: 1px solid #ff0051;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.event{
+    margin-bottom: 15vh;
+    background-color: #dc2828;
+    border-radius: 15px;;
+    width:25vw;
+    height:25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.event-btn{
+    background-color: black;
+    color: yellow;
+    font-size: 25px;
+    border-radius: 4px;
+    border: 2px solid yellow;
+    padding: 10px 15px;
+}
+.event-btn:hover{
+    transition: 0.3s ease-in-out;
+    border: 3px solid black;
+    color: black;
+    background-color: yellow;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+
+}
+
+.para{
+    color:white;
+}
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 8px;;
+    padding: 20px 30px;
+    border: 1px solid slateblue;
+    box-shadow: 1px 1px 10px #3120a0;
+    background-color: #cbc7e4;
+    color:#d2146a;
+    margin-bottom: 10vh;
+}
+.form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:20px;
+}
+.input{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+.submit-btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: none;
+    background-color: #d2146a;
+    color: white;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    transition: 0.3s ease-in;
+    box-shadow: 1px 5px 12px #d2146a;
+    color: #d2146a;
+    background-color: white;
+    /* font-weight: 700; */
 }

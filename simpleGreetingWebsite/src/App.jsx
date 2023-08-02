@@ -1,7 +1,8 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { useState } from "react";
+import DigitalClock from "./DigitalClock";
+import Event from "./Event";
+import Form from "./form";
 
 function App() {
   let currentDate = new Date();
@@ -24,11 +25,20 @@ function App() {
 
   return (
     <>
-      <h1>
-        Hello Sir, <span style={cssStyle}>{greeting}</span>
-      </h1>
+      <div className="app">
+        <h1>
+          Hello Sir, <span style={cssStyle}>{greeting}</span>
+        </h1>
 
-      <Time />
+        <Time />
+
+        <DigitalClock />
+
+        <Event />
+
+        <Form />
+      </div>
+      
     </>
   );
 }
