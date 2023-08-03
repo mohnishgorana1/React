@@ -1,6 +1,7 @@
 
 import './App.css'
-import Pokedex from './components/Pokedex/Pokedex'
+import CustomRoutes from './Routes/CustomRoutes'
+// import Pokedex from './components/Pokedex/Pokedex'
 
 function App() {
   
@@ -9,7 +10,8 @@ function App() {
     <>  
       <div className='app'>
 
-        <Pokedex />
+        {/* <Pokedex /> */}
+        <CustomRoutes />
       </div>
     </>
   )

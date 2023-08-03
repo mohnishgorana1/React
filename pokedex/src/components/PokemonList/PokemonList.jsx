@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import axios from 'axios';
 import './PokemonList.css'
 import Pokemon from "../Pokemon/Pokemon";
+// import PokemonDetails from "../PokemonDetails/PokemonDetails";
 
 
 function PokemonList() {
@@ -84,10 +85,11 @@ function PokemonList() {
             <button disabled = {nextUrl === null} onClick={()=> setPokedexUrl(nextUrl)} className="nav-btn"> Next ⏭️ </button>
           </div>
           <div className="pokemon-list">
-            { (isLoading) ? 'Loading...' : 
-                  pokemonList.map( (pokemon) => <Pokemon name={pokemon.name} image={pokemon.image} key={pokemon.id} />)
-                  // <Pokemon name={pokemonList.name} image={pokemonList.image} />
-            }
+              { (isLoading) ? 'Loading...' : 
+                    pokemonList.map( (pokemon) => 
+                      <Pokemon name={pokemon.name} image={pokemon.image} key={pokemon.id} id={pokemon.id} />
+                  )
+              }
           </div>
            
            
