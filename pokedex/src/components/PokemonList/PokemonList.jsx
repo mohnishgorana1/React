@@ -11,22 +11,31 @@ function PokemonList() {
     const [pokemonList, setPokemonList] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
 
+    const POKEDEX_URL = 'https://pokeapi.co/api/v2/pokemon'
     async function downloadPokemons(){
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
-        console.log("Initial Response \n" , response.data);
+        const response = await axios.get(POKEDEX_URL);  //* download list of 20 Pokemons
         
-        const pokemonResults = response.data.results; // array of name and url(for each pokemon)
+        const pokemonResults = response.data.results; // array of objects {name and url(for each pokemon)}  //* details for each pokemon in its own url so we need that url to extract their info's
+        console.log("Initial Response \n" , response.data); 
+
+        // iterating over the array of pokemon and using their url to create an array of promise that will download that 20 pokemons
         const pokemonResultPromise = pokemonResults.map( (pokemon) => axios.get(pokemon.url) );  // pokemonResultPromise will store the result of url of pokemon object 
+        
         console.log("pokemonResultPromise", pokemonResultPromise);
 
-        const pokemonData = await axios.all(pokemonResultPromise);  
+
+        // passing tthat promise to axios.all and it will await
+        const pokemonData = await axios.all(pokemonResultPromise);    // array of 20 pokemon detail data
         console.log("pokemonData", pokemonData);
 
         // const result = {
         //     name: pokemonData[0].data.name,
         //     image: pokemonData[0].data.sprites.back_default  //! this will give you the link of image from github 
         // }
-      const result = pokemonData.map( (pokeData) => {
+
+
+      //iterate on data of each pokemon and extract id, name, images, type
+      const PokeListResult = pokemonData.map( (pokeData) => {
             const pokemon = pokeData.data;
 
             return {
@@ -38,8 +47,10 @@ function PokemonList() {
 
         });
        
-        console.log("result", result);
-        setPokemonList(result);
+        console.log("result", PokeListResult);
+
+        
+        setPokemonList(PokeListResult);
         setIsLoading(false)
     }
 
