@@ -49,11 +49,15 @@ function PokemonList() {
        
         console.log("result", PokeListResult);
 
-        
+
         setPokemonList(PokeListResult);
+
+
         setIsLoading(false)
     }
 
+
+    //! sara ka sara kamal useEffect kr rha h 
     useEffect(() => { 
       downloadPokemons();
     }, [])
@@ -65,12 +69,17 @@ function PokemonList() {
         <div className="pokemon-list-container">
            <h2 id="pokemon-list-heading">Pokemon List</h2>
            <br/>
+           <div className="pokemon-btns">
+            <button id="prev-btn" className="nav-btn"> ⏮️ Prev </button>
+            <button id="next-btn" className="nav-btn"> Next ⏭️ </button>
+           </div>
            <div className="pokemon-list">
             { (isLoading) ? 'Loading...' : 
                   pokemonList.map( (pokemon) => <Pokemon name={pokemon.name} image={pokemon.image} key={pokemon.id} />)
                   // <Pokemon name={pokemonList.name} image={pokemonList.image} />
             }
            </div>
+           
            
         </div>
     </>
