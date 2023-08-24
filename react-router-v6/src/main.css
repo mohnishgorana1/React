@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #18214f;
+    /* color: white; */
+}
+.home-page, .courses-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+    justify-content: center;
+    margin: 50px auto;
+
+}
+.nav-btns {
+    display: flex;
+    gap:30px;
+    text-decoration: none;
+}
+#courses, #bundles, #docs{
+    padding: 12px 22px;
+    border-radius: 8px;
+    color: white;
+    /* background-color: black; */
+    border: 1px solid white;
+    box-shadow: 3px 3px 0px #dfdfe4;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+.heading{
+    font-size: 42px;
+    letter-spacing: 5px;
+    color: white;
+}
+
+
+.course-lists{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+
+}
+li{
+    color:#cced0e;
+    font-size: 22px;
+    border: 1px solid yellow;
+    padding: 10px 25px;
+    border-radius: 5rem;
+    text-align: center;
+}
+.course-link{
+    text-decoration: none;
+}
+.web-dev-wrapper, .react-wrapper, .nodejs-wrapper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   
+}
+.course_details{
+    margin-top: 30px;
+    padding: 20px ;
+    /* text-align: center; */
+    color:black;
+    cursor:default;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 2px;
+}
+.course_details > h2{
+    color:white;
+    font-size: 30px;
+    border-bottom: 1px solid white;
+    padding: 0;
+    text-align: center;
+ 
+    
+}
+.course_details > h3, h4{
+    color:rgb(255, 0, 68);
+    font-size: 20px;
+
+
+}
+p{
+    font-size: 20px;
+    color: gray;
+}

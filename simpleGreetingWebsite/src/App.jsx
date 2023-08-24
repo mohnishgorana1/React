@@ -3,6 +3,7 @@ import { useState } from "react";
 import DigitalClock from "./DigitalClock";
 import Event from "./Event";
 import Form from "./form";
+import useEffects1 from "./useEffects1";
 
 function App() {
   let currentDate = new Date();
@@ -37,6 +38,8 @@ function App() {
         <Event />
 
         <Form />
+
+        <useEffects1 />
       </div>
       
     </>
